@@ -1,13 +1,11 @@
-import { useContext } from 'react' // Не забудьте добавить useContext
+import { useCart } from '../hooks/useCart'
 import styles from './ItemCard.module.css'
-import { CartContext } from '../context/CartContext'
 
 export default ({ itemData }) => {
-  const { cart, setCart } = useContext(CartContext)
+  const { addToCart } = useCart()
 
   const handleAddToCart = () => {
-    setCart((prevCart) => [...prevCart, itemData])
-    console.log(cart)
+    addToCart(itemData)
   }
 
   return (
