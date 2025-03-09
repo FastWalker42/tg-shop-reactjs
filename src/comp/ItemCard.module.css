@@ -1,0 +1,146 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background: var(--item-bg);
+  padding: var(--spacing);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  height: 100%;
+  overflow: hidden;
+  transition: scale 0.2s ease-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.item article {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.item .imgContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.item section {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.item section h1 {
+  position: relative;
+  white-space: nowrap; /* Отключает перенос строк */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Добавляет "..." при обрезке */
+  max-width: 100%;
+  text-align: start;
+  height: 2em;
+  padding-bottom: 10px;
+
+  /* Плавное затухание справа */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.item:hover {
+  transform: opacity(0.97);
+}
+
+.item img {
+  max-width: 100%;
+  align-self: center;
+}
+
+@keyframes shake {
+  from {
+    transform: rotate(-0.4deg);
+  }
+  to {
+    transform: rotate(0.4deg);
+  }
+}
+
+.editable {
+  animation: shake 0.17s infinite alternate linear;
+  scale: 0.97;
+}
+
+.deleteButton {
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgb(255, 74, 74);
+  box-shadow: 0 1px 4px rgb(0, 0, 0);
+  font-weight: 400;
+  color: white;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  font-size: 2rem;
+  z-index: 20;
+}
+
+.price {
+  font-size: 1.6rem;
+}
+
+.sale .price {
+  font-weight: 700;
+  color: rgb(255, 85, 142);
+}
+
+.addToCart {
+  width: 100%;
+  height: 60px;
+  background: rgb(114, 114, 255);
+  border-radius: 5px;
+  color: white;
+  font-weight: 540;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: scale 0.1s ease-out;
+}
+
+.addToCart:hover {
+  opacity: 0.9;
+  scale: 0.97;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  gap: 10px;
+}

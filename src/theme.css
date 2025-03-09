@@ -1,0 +1,71 @@
+:root {
+  --main-bg: #bcc3cf;
+  --item-bg: #fff;
+  --outline: #aaa;
+  --secondary: #8a8a8a;
+  --sale: linear-gradient(90deg, #b472ff, #6bc4ff);
+  --bg-color: #fff;
+  --text-color: #333;
+  --btn-color: #8592c9;
+
+  --main-bg-dark: #2e2e2e;
+  --item-bg-dark: #3c3c3c;
+  --outline-dark: #666;
+  --secondary-dark: #aaa;
+  --sale-dark: linear-gradient(90deg, #6b72ff, #4b94ff);
+  --bg-color-dark: #161616;
+  --text-color-dark: #ccc;
+  --btn-color-dark: #5e6a8a;
+
+  /* ГЛАВНЫЕ СТИЛИ */
+  --font-size: 1rem;
+  --spacing: 1rem;
+}
+
+/* Применение тем */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--font-size);
+}
+
+.item {
+  background: var(--item-bg);
+  color: var(--text-color);
+}
+
+.btn {
+  background-color: var(--btn-color);
+  color: var(--item-bg);
+}
+
+/* Темная тема 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: var(--main-bg-dark);
+    --item-bg: var(--item-bg-dark);
+    --outline: var(--outline-dark);
+    --secondary: var(--secondary-dark);
+    --sale: var(--sale-dark);
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --btn-color: var(--btn-color-dark);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+  }
+
+  .item {
+    background: var(--item-bg);
+    color: var(--text-color);
+  }
+
+  .btn {
+    background-color: var(--btn-color);
+    color: var(--item-bg);
+  }
+}
+*/
