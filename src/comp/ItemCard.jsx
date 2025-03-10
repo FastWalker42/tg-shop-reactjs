@@ -1,12 +1,8 @@
-import { useCart } from '../hooks/useCart'
 import styles from './ItemCard.module.css'
+import { useCartStore } from '../store/CartStore.ts'
 
 export default ({ itemData }) => {
-  const { addToCart } = useCart()
-
-  const handleAddToCart = () => {
-    addToCart(itemData)
-  }
+  const addToCart = useCartStore((state) => state.addToCart)
 
   return (
     <div
@@ -29,7 +25,9 @@ export default ({ itemData }) => {
         </section>
         <button
           className={styles.addToCart}
-          onClick={handleAddToCart}
+          onClick={() => {
+            addToCart(itemData.id)
+          }}
         >
           В корзину
         </button>

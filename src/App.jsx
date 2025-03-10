@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
-import { CartContext } from './context/CartContext'
 
 import Container from './comp/Container'
+import Window from './comp/Modal/Window'
 
 export default () => {
   const [items, setItems] = useState([])
-  const [cart, setCart] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,11 +24,10 @@ export default () => {
   }, [])
   return (
     <>
-      <CartContext.Provider value={{ cart, setCart }}>
-        <main>
-          <Container items={items} />
-        </main>
-      </CartContext.Provider>
+      <Window></Window>
+      <main>
+        <Container items={items} />
+      </main>
     </>
   )
 }

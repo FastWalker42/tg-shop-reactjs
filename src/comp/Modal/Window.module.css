@@ -1,4 +1,4 @@
-#modal {
+.modal {
   width: 100%;
   max-width: 900px;
   height: 100%;
@@ -19,7 +19,7 @@
   transition: width 0.5s ease-out, height 0.5s ease-out;
 }
 
-.back-symbol {
+.backSymbol {
   position: absolute;
   top: 15px;
   left: 10px;
@@ -34,12 +34,12 @@
   transition: background 0.2s;
 }
 
-.back-symbol:hover {
+.backSymbol:hover {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 6px;
 }
 
-#modal article {
+.modal article {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -48,7 +48,7 @@
   overflow-y: auto;
 }
 
-#modal .imgContainer {
+.modal .imgContainer {
   width: 100%; /* Фиксированная ширина */
   min-height: 300px;
   height: 100%; /* Фиксированная высота */
@@ -61,19 +61,19 @@
   border-radius: 6px;
 }
 
-#modal .imgContainer img {
+.modal .imgContainer img {
   width: 100%;
   height: 100%;
   object-fit: contain; /* Картинка вписывается внутрь контейнера без обрезки */
 }
 
-#modal section {
+.modal section {
   text-align: center;
   padding: 1rem;
   max-width: 100%;
 }
 
-#modal h1 {
+.modal h1 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   word-wrap: break-word;
@@ -87,7 +87,7 @@
   margin-bottom: 1rem;
 }
 
-#modal h3 {
+.modal h3 {
   font-size: 1.2rem;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -108,25 +108,25 @@ li {
 }
 
 @media (min-width: 700px) {
-  #modal {
+  .modal {
     height: auto;
     top: 10vh;
     border-radius: 12px;
   }
-  #modal article {
+  .modal article {
     flex-direction: row;
     align-items: flex-start;
   }
-  #modal .imgContainer {
+  .modal .imgContainer {
     width: 300px;
     flex: 1;
     max-width: 45%;
   }
-  #modal section {
+  .modal section {
     flex: 1;
     text-align: left;
   }
-  #modal h1 {
+  .modal h1 {
     text-align: left;
   }
 }
